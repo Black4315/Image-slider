@@ -1,0 +1,74 @@
+@mixin img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover ;
+}
+@mixin keyF($anim-name) {
+    @-webkit-keyframes #{$anim-name} {
+      @content;
+    }
+    @keyframes #{$anim-name} {
+      @content;
+    }
+  }
+
+
+// NEXT
+  @include keyF(thumbnail){
+    to{
+        transform: translateX(0);
+    }
+}
+
+@include keyF(showThumbnail) {
+    to{
+        width: 150px;   
+    }
+}
+
+
+@include keyF(showimage) {
+    to{
+        width: 100%;
+        height: 100%;
+        bottom:0;
+        left: 0;
+        border-radius: 0;    
+    }
+}
+
+@include keyF(showContent) {
+    to{
+        opacity: 1;
+        filter:blur(0);
+        transform: translateY(0);
+    }
+}
+
+
+// PREV
+
+@include keyF(outContent){
+  to{
+      transform: translateY(50px);
+      filter:blur(20px);
+      opacity: 0 ;
+      // animation: outContent 1.5s ease-in-out 1 forwards;
+  }
+}
+@include keyF(outImage){
+  to{
+      position: absolute;
+      left: 50%;
+      bottom: 50px;
+      width: 150px;
+      height: 220px;
+      border-radius:20px;
+      filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.727));             
+  }
+}
+@include keyF(showTime){
+  to{
+      width: 0;
+  }
+}
