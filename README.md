@@ -14,7 +14,7 @@ A stylish **Image Slider** created using **HTML**, **SCSS**, and **JavaScript**.
 
 ## 📸 Snapshot
 
-![Image Slider Snapshot](assets/images/image-slider-snapshot.png)
+![Image Slider Snapshot](./image/screenshot.png)
 
 ## 📄 License
 MIT License © 2024 Yahia Badr
